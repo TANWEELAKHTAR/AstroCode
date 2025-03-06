@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: "exo2";
+    src: url(/fonts/Exo2-Regular.ttf);
+}
+
+*{
+    font-family: "exo2";
+}
+.bg{
+    background-image: url('/images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
