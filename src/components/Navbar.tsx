@@ -112,9 +112,9 @@ const Navbar = () => {
 
       {/* Desktop Menu */}
       <div className="hidden md:flex justify-center items-center gap-8">
-        <Link href="/" className="text-base">Features</Link>
-        <Link href="/" className="text-base">About</Link>
-        <Link href="/" className="text-base">Blog</Link>
+        <Link href="/" className="text-base hover:text-sky-500">Features</Link>
+        <Link href="/" className="text-base hover:text-sky-500">About</Link>
+        <Link href="/" className="text-base hover:text-sky-500">Blog</Link>
       </div>
       
       <div className="hidden md:flex justify-center items-center">
