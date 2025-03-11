@@ -9,6 +9,7 @@ import {
 } from "@clerk/nextjs";
 import Link from "next/link";
 import { gsap } from "gsap";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -70,7 +71,7 @@ const Navbar = () => {
   return (
     <nav className="max-w-4xl mx-auto flex flex-wrap justify-between items-center py-4 px-4 md:px-8 bg-[#13151B] rounded-xl text-white absolute top-4 md:top-8 left-2 right-2 md:left-0 md:right-0 border border-zinc-600 border-b-0 z-50">
       <div className="flex justify-center items-center">
-        <img className="h-6" src="/images/AstroCode.svg" alt="AstroCode Logo" />
+        <Image height={32} width={150} className="h-6" src="/images/AstroCode.svg" alt="AstroCode Logo" />
       </div>
 
       {/* Hamburger Menu Button (mobile only) */}

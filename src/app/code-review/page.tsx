@@ -12,6 +12,7 @@ import rehypeHighlight from "rehype-highlight";
 import "highlight.js/styles/github-dark.css";
 import axios from "axios";
 import Link from "next/link";
+import Image from "next/image";
 
 // Define TypeScript interfaces
 interface ReviewResponse {
@@ -79,7 +80,7 @@ const App: React.FC = () => {
     }
   }
 
-  const getLanguageHighlighter = (code: string): string => {
+  const getLanguageHighlighter = (code: string) => {
     try {
       return highlight(
         code,
@@ -87,7 +88,8 @@ const App: React.FC = () => {
         language
       );
     } catch (error) {
-      return highlight(code, languages.typescript, "typescript");
+      highlight(code, languages.typescript, "typescript");
+      console.error("Error highlighting code:", error);
     }
   };
 
@@ -107,7 +109,7 @@ const App: React.FC = () => {
       >
         <div className="flex flex-col sm:flex-row sm:items-center w-full sm:w-auto mb-2 sm:mb-0">
             
-          <Link href={"/"} className="w-full flex justify-center"><img className="h-8 sm:h-6 mr-2 my-6 sm:my-0" src="/images/AstroCode.svg" alt="" /></Link>
+          <Link href={"/"} className="w-full flex justify-center"><Image height={32} width={150} className="mr-2 my-6 sm:my-2" src="/images/AstroCode.svg" alt="logo" /></Link>
           <div className="flex items-center mb-2 sm:mb-0">
             <select
               value={language}
@@ -278,7 +280,7 @@ const App: React.FC = () => {
                     ></path>
                   </svg>
                   <p className="text-sm sm:text-base">
-                    Click "Review Code" to get an AI-powered analysis
+                    Click &quot;Review Code&quot; to get an AI-powered analysis
                   </p>
                 </div>
               </div>
